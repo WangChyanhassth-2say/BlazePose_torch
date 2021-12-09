@@ -151,7 +151,7 @@ class BlazePose(nn.Module):
             nn.Sigmoid()
             )
         self.conv14 = nn.Sequential(
-            nn.ReLU6(inplace=True),
+            nn.ReLU6(inplace=False),
             nn.AdaptiveAvgPool2d((1, 1)),
             h_swish(),
             Reshape(192),
