@@ -166,7 +166,7 @@ class BlazePose(nn.Module):
         # stem layers
         x = self.conv1(x)
         # dw and pw like mobilenet
-        x += self.conv2(x)
+        x = x + self.conv2(x)
         
         # blaze blocks
         y0 = self.conv3(x)
