@@ -1,6 +1,7 @@
 # BlazePose_torch  
 
 torch implement of google blazePose  
+BlazePose: On-device Real-time Body Pose tracking  
 
 ## 2021/12/07  
 
