@@ -78,7 +78,7 @@ class BlazePose(nn.Module):
         super(BlazePose, self).__init__()
 
         self.num_keypoints = num_keypoints
-        self.return = return_type
+        self.return_type = return_type
 
         # stem layers
         self.conv1 = nn.Conv2d(3, 16, 3, 2, 1, bias=False)
@@ -192,9 +192,9 @@ class BlazePose(nn.Module):
         joints = self.conv13(joints)
         joints = self.conv14(joints) # => joints
 
-        if self.return == 'two_head':
+        if self.return_type == 'two_head':
             return joints, heatmap
-        elif self.return == 'heatmap':
+        elif self.return_type == 'heatmap':
             return heatmap
         else:
             return joints
