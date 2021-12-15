@@ -74,10 +74,11 @@ class BlazeBlock(nn.Module):
 
 
 class BlazePose(nn.Module):
-    def __init__(self, num_keypoints: int):
+    def __init__(self, num_keypoints: int, return_type='two_head'):
         super(BlazePose, self).__init__()
 
         self.num_keypoints = num_keypoints
+        self.return = return_type
 
         # stem layers
         self.conv1 = nn.Conv2d(3, 16, 3, 2, 1, bias=False)
@@ -191,11 +192,16 @@ class BlazePose(nn.Module):
         joints = self.conv13(joints)
         joints = self.conv14(joints) # => joints
 
-        return [heatmap, joints]
+        if self.return == 'two_head':
+            return joints, heatmap
+        elif self.return == 'heatmap':
+            return heatmap
+        else:
+            return joints
 
 if __name__ == '__main__':
     from torchsummaryX import summary
 
     dummy_input = torch.rand(8,3,256,256)
-    model = BlazePose(33)
+    model = BlazePose(33, 'two_head')
     profile = summary(model,dummy_input)
