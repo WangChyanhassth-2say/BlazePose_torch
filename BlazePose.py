@@ -276,5 +276,5 @@ if __name__ == '__main__':
     from torchsummaryX import summary
 
     dummy_input = torch.rand(8,3,256,256)
-    model = BlazePose(33, 'heatmap') # coco shape
+    model = BlazePose(33, 'heatmap')
     profile = summary(model,dummy_input)
