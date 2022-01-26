@@ -189,7 +189,6 @@ class BlazePose(nn.Module):
             nn.Conv2d(64, 32, 1, 1, 0, bias=False),
             nn.BatchNorm2d(32)
             )
-        # self.conv10 = nn.Sequential()
 
         # up sample layer
         self.upsample0 = nn.Upsample(scale_factor=2, mode='bilinear',align_corners=True)
@@ -215,9 +214,11 @@ class BlazePose(nn.Module):
 
         # stem layers
         x = self.conv1(x)
+        
         # dw and pw like mobilenet
         x = self.conv2(x)
         x = self.conv2_b1(x)
+        
         # blaze blocks
         y0 = self.conv3(x)
         y0 = self.conv3_b1(y0)
@@ -241,8 +242,7 @@ class BlazePose(nn.Module):
         heatmap = self.conv11(x0) # => heatmap
 
         # get joints
-       # with torch.no_grad():
-        x = x0 + y0.detach()
+        x = x0.detach() + y0.detach()
         x = self.conv4_1(x) + y1.detach()
         x = self.conv5_1(x) + y2.detach()
         x = self.conv6_1(x) + y3.detach()
