@@ -10,5 +10,5 @@ The training code you may refer [HRNet](https://github.com/HRNet/HigherHRNet-Hum
 Training for 210 epoch and using [DARK](https://github.com/ilovepose/DarkPose) to decode the heatmap:  
 | Arch | AP | Ap .5 | AP .75 | AP (M) | AP (L) | AR | AR .5 | AR .75 | AR (M) | AR (L) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| BlazePose | 0.623 | 0.894 | 0.714 | 0.616 | 0.684 | 0.679 | 0.906 | 0.748 | 0.648 | 0.726 |  
+| BlazePose-Lite | 0.623 | 0.894 | 0.714 | 0.616 | 0.684 | 0.679 | 0.906 | 0.748 | 0.648 | 0.726 |  
 
