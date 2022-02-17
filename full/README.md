@@ -1,6 +1,6 @@
 # BlazePose-Full
 
-To the full version I tried to implement totally follwed the paper.  
+To the full version I tried to implement totally follwed by the paper.  
 But to the output I use [SimDR](https://github.com/leeyegy/SimDR).  
 You can run the lib/models/BlazePose.py to check the model layers.  
 The params goes to 3.4m(for 17 keypoints), which is quite similar to the one in the paper(3.5m for 32 kerpoints).  
