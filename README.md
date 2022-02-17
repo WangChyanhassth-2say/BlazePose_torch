@@ -5,6 +5,7 @@ BlazePose: On-device Real-time Body Pose tracking
 
 
 ![image](https://github.com/WangChyanhassth-2say/BlazePose_torch/blob/main/lite/lite_out.gif)  
+👆It's a 1920x1080 video runing by cpu only (Intel Core i5-1135G7) and showing the on-time fps.  
 
 
 # Performance:
