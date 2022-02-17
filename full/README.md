@@ -7,7 +7,7 @@ The params goes to 3.4m(for 17 keypoints), which is quite similar to the one in 
 
 
 The training code you may refer [HRNet](https://github.com/HRNet/HigherHRNet-Human-Pose-Estimation), you need to replace the folders by those I uploded here.  
-If you want to train the full version model, you may need to delete the regression layers and train the heatmap branch as pretrain.  
+If you want to train the full version model, you may need to delete the regression layers and train the heatmap branch as pretrain first.  
 Or you can use the tools/model_first.pth which I given [here](https://github.com/WangChyanhassth-2say/BlazePose_torch/blob/main/full/tools/model_first.pth).
 
 Training for 210 epoch:  
