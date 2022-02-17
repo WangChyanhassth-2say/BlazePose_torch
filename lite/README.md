@@ -1,6 +1,6 @@
 # BlazePose-Lite
 
-To the lite version I tried to implement all by heatmap branch.  
+To the lite version I tried to implement only by heatmap branch.  
 You can run the BlazePose.py to check the model layers.  
 The params goes to 1.7m, which is a little bit larger than the model proposed in the paper(1.3m).  
 
